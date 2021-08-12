@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="renderer" content="webkit">
+
+
+    <link href="files3/index.css" rel="stylesheet">
+    <script src="files3/jquery-3.js"></script>
+    <script src="files3/validation.js"></script>
+    <link href="files3/layer_002.css" rel="stylesheet">
+    <script src="files3/layer.js"></script>
+    <link rel="stylesheet" href="files3/layer.css" id="layuicss-layer">
+    <title>沈阳工程学院-疫情防控管理平台</title>
+    <script type="text/javascript">
+        vpn_eval((function() {
+
+            /*解决苹果返回不刷新问题*/
+            $(function() {
+                var isPageHide = false;
+                window.addEventListener('pageshow', function() {
+                    if (isPageHide) {
+                        window.location.reload();
+                    }
+                });
+                window.addEventListener('pagehide', function() {
+                    isPageHide = true;
+                });
+            });
+
+
+        }).toString().slice(12, -2), "");
+    </script>
+</head>
+
+<body>
+
+
+    <link href="files3/ChooseSys.css" rel="stylesheet">
+    <script>
+        vpn_eval((function() {
+
+            //是否有多个返校批次
+            var isBackConfigHaveProvince = false;
+            $(function() {
+                var length = $(".choose_box>div").length;
+                var w_w = $(window).width();
+                if (length == 2 && w_w > 980) {
+                    $(".choose_box").width(800);
+                }
+            })
+
+
+        }).toString().slice(12, -2), "");
+    </script>
+    <div class="choose_box">
+        <div id="platfrom3_1" class="plat hide platfrom3" data-reg-status="7" style="display: block;">
+            <a class="" href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/BackSchool/Index">
+                <div class="plat-title">
+                    返校申请<br>
+                    <span>申请已结束</span>
+                </div>
+                <img src="files3/plat3.png">
+            </a>
+        </div>
+        <script type="text/javascript">
+            vpn_eval((function() {
+
+                //没有省份限制
+                if (isBackConfigHaveProvince == false) {
+                    HandleBackDvStatus();
+                }
+                //处理返校div显示状态
+                function HandleBackDvStatus() {
+                    var elm = $(".platfrom3");
+                    //显示处理
+                    if (elm.length == 1) { //如果只有一个直接显示
+                        $(elm[0]).show();
+                    } else {
+                        var dvShowFlag = false;
+                        //优先显示已经申请通过的
+                        for (var i = 0; i < elm.length; i++) {
+                            if ($(elm[i]).attr("data-reg-status") != "") {
+                                $(elm[i]).show();
+                                dvShowFlag = true;
+                            } else {
+                                $(elm[i]).hide();
+                            }
+                        }
+                        //如果没有审核通过的 但是还有下一个批次 直接显示最后一个
+                        if (dvShowFlag == false) {
+                            $(elm[elm.length - 1]).show();
+                        }
+                    }
+                }
+
+
+            }).toString().slice(12, -2), "");
+        </script>
+        <div id="platfrom1" class="plat">
+            <a class="" href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/Temperature/StuTemperatureInfo">
+                <div class="plat-title">
+                    体温监测管理<br>
+                    <span>登记中</span>
+
+                </div>
+                <img src="files3/plat1.png">
+            </a>
+        </div>
+
+        <div id="platfrom4" class="plat">
+            <a href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/AbnormalReporting/Index">
+                <div class="plat-title">
+                    学生异常上报<br>
+                    <span>上报中</span>
+                </div>
+                <img src="files3/plat4.png">
+            </a>
+        </div>
+        <div id="platfrom4" class="plat">
+            <a href="jilu.htm">
+                <div class="plat-title">
+                    学生日常请假<br>
+                    <span>申请中</span>
+                </div>
+                <img src="files3/plat5.png">
+            </a>
+        </div>
+    </div>
+    <link href="files3/menustyle.css" rel="stylesheet">
+    <script src="files3/menu.js"></script>
+    <div id="cd-nav" class="is-fixed">
+        <a href="javascript:this.top.vpn_inject_scripts_window(this);vpn_eval((function () { void(0) }).toString().slice(14, -2))" class="cd-nav-trigger"><span></span></a>
+        <nav id="cd-main-nav">
+            <ul>
+                <li>
+                    <a href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/Account/ChooseSys">
+                        <img src="files3/icon1.png"> 返回首页
+                    </a>
+                </li>
+                <li>
+                    <a href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/Account/Logout">
+                        <img src="files3/icon3.png"> 安全退出
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+</body>
+
+</html>
+<!--第二版-->

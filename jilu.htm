@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="renderer" content="webkit">
+
+
+    <link href="files2/index.css" rel="stylesheet">
+    <script src="files2/jquery-3.js"></script>
+    <script src="files2/validation.js"></script>
+    <link href="files2/layer.css" rel="stylesheet">
+    <script src="files2/layer.js"></script>
+    <link rel="stylesheet" href="files2/layer_002.css" id="layuicss-layer">
+    <title>沈阳工程学院-疫情防控管理平台</title>
+    <script type="text/javascript">
+        vpn_eval((function() {
+
+            /*解决苹果返回不刷新问题*/
+            $(function() {
+                var isPageHide = false;
+                window.addEventListener('pageshow', function() {
+                    if (isPageHide) {
+                        window.location.reload();
+                    }
+                });
+                window.addEventListener('pagehide', function() {
+                    isPageHide = true;
+                });
+            });
+
+
+        }).toString().slice(12, -2), "");
+    </script>
+</head>
+
+<body>
+
+    <div id="form1">
+        <h1>
+            <span id="TopicName">学生请假记录</span>
+        </h1>
+        <div class="Table_list">
+            <div class="textlist pad-bt0"></div>
+
+            <!-- 记录 -->
+            <div class="textlist model-list" data-id="812ac5ae-68b5-459d-af7e-d587ad318f77">
+                <div class="row">
+                    <div class="th_left phone">请假时间段：</div>
+                    <div class="th_right phone">
+                        <label><span id="timer1"></span> 08:00 至 <span id="timer2"></span> 21:00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">请假原因：</div>
+                    <div class="th_right phone">
+                        <label>事假</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">处理状态：</div>
+                    <div class="th_right phone">
+                        <label class="red">
+                            <span>请假中</span>
+                            <a href="jc191.html" class="btn btn-primary">下载请假单</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 记录 -->
+            <div class="textlist model-list" data-id="2843b5a6-8f91-4c11-a6ce-6e7b3d6722a7">
+                <div class="row">
+                    <div class="th_left phone">请假时间段：</div>
+                    <div class="th_right phone">
+                        <label>2020-12-10 10:00 至 2020-12-11 18:00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">请假原因：</div>
+                    <div class="th_right phone">
+                        <label>事假</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">处理状态：</div>
+                    <div class="th_right phone">
+                        <label class="red">
+                        <span>已销假</span>
+                        <a href="#" class="btn btn-primary">下载请假单</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 记录 -->
+            <div class="textlist model-list" data-id="2843b5a6-8f91-4c11-a6ce-6e7b3d6722a7">
+                <div class="row">
+                    <div class="th_left phone">请假时间段：</div>
+                    <div class="th_right phone">
+                        <label>2020-11-21 9:00 至 2020-11-22 18:00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">请假原因：</div>
+                    <div class="th_right phone">
+                        <label>回家</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">处理状态：</div>
+                    <div class="th_right phone">
+                        <label class="red">
+            <span>已销假</span>
+            <a href="#" class="btn btn-primary">下载请假单</a>
+            </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 记录 -->
+            <div class="textlist model-list" data-id="2843b5a6-8f91-4c11-a6ce-6e7b3d6722a7">
+                <div class="row">
+                    <div class="th_left phone">请假时间段：</div>
+                    <div class="th_right phone">
+                        <label>2020-09-30 13:01 至 2020-10-07 18:00</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">请假原因：</div>
+                    <div class="th_right phone">
+                        <label>回家</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="th_left phone">处理状态：</div>
+                    <div class="th_right phone">
+                        <label class="red">
+            <span>已销假</span>
+            <a href="#" class="btn btn-primary">下载请假单</a>
+            </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="SaveBtnDiv" class="btn_div fixed">
+            <button type="button" onclick="var vpn_return;eval(vpn_rewrite_js((function () { location.href='/SPCP/Web/Leave/Detail' }).toString().slice(14, -2), 2));return vpn_return;" class="save_form">申 请</button>
+        </div>
+
+    </div>
+    <script>
+        vpn_eval((function() {
+
+            $(".model-list").on("click", function() {
+                window.location.href = "/SPCP/Web/Leave/detail?id=" + $(this).attr("data-id");
+            });
+
+
+        }).toString().slice(12, -2), "");
+    </script>
+    <link href="files2/menustyle.css" rel="stylesheet">
+    <script src="files2/menu.js"></script>
+    <div id="cd-nav" class="is-fixed">
+        <a href="javascript:this.top.vpn_inject_scripts_window(this);vpn_eval((function () { void(0) }).toString().slice(14, -2))" class="cd-nav-trigger"><span></span></a>
+        <nav id="cd-main-nav">
+            <ul>
+                <li>
+                    <a href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/Account/ChooseSys">
+                        <img src="files2/icon1.png"> 返回首页
+                    </a>
+                </li>
+                <li>
+                    <a href="https://webvpn.sie.edu.cn/http/77726476706e69737468656265737421e8e2449b283e6f1e6d018ce29d51367b8930/SPCP/Web/Account/Logout">
+                        <img src="files2/icon3.png"> 安全退出
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script>
+        // 封装一个函数返回当前的 年月日
+        function getTimer() {
+            var time = new Date();
+            var y = time.getFullYear();
+            y = y < 10 ? '0' + y : y;
+            var m = time.getMonth() + 1;
+            m = m < 10 ? '0' + m : m;
+            var d = time.getDate();
+            d = d < 10 ? '0' + d : d;
+            return y + '-' + m + '-' + d;
+        }
+        document.getElementById("timer1").innerHTML = getTimer();
+        document.getElementById("timer2").innerHTML = getTimer();
+    </script>
+</body>
+
+</html>
+<!--第二版-->
